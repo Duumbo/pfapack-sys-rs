@@ -1,0 +1,18 @@
+[package]
+name = "pfapack-sys"
+version = "0.1.0"
+edition = "2021"
+links = "pfapack"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+libc = "0.2"
+
+[dependencies.num-complex]
+version = "0.4"
+default-features = false
+
+[lib]
+name = "pfapack_sys"
+path = "src/pfapack.rs"
