@@ -1,11 +1,10 @@
-OBJECTS= skpfa.o skpf10.o skbpfa.o skbpf10.o sktrf.o sktrd.o skbtrd.o
-
 CC = gcc
 CFLAGS = -O3
 C_DIR = $(OUT_DIR)/c_interface
+OBJECTS= $(C_DIR)/skpfa.o $(C_DIR)/skpf10.o $(C_DIR)/skbpfa.o $(C_DIR)/skbpf10.o $(C_DIR)/sktrf.o $(C_DIR)/sktrd.o $(C_DIR)/skbtrd.o
 
 all: $(OBJECTS)
-	$(AR) rvu $(C_DIR)/libcpfapack.a $(C_DIR)/$(OBJECTS)
+	$(AR) rvu $(C_DIR)/libcpfapack.a $(OBJECTS)
 
 clean:
 	rm -f *.o
