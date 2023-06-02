@@ -16,9 +16,10 @@ OBJECTS= slasktrd.o slasktrf.o sskbpf10.o sskbpfa.o sskbtrd.o \
 
 FORT = gfortran
 FFLAGS = -O3 -fimplicit-none
+F_DIR = $(OUT_DIR)/fortran
 
 all: $(OBJECTS)
-	$(AR) rvu libpfapack.a $(OBJECTS)
+	$(AR) rvu $(F_DIR)/libpfapack.a $(F_DIR)/$(OBJECTS)
 
 clean:
 	rm -f *.o
@@ -28,7 +29,7 @@ clean:
 .SUFFIXES: .o .f .f90
 
 .f90.o:
-	$(FORT) $(FFLAGS) -c $< -o $@
+	$(FORT) $(FFLAGS) -c $< -o $(F_DIR)/$@
 
 .f.o:
-	$(FORT) $(FFLAGS) -c $< -o $@
+	$(FORT) $(FFLAGS) -c $< -o $(F_DIR)/$@
