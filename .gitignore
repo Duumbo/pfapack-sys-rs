@@ -16,3 +16,4 @@ Cargo.lock
 # Fortran and C objects
 *.o
 *.a
+*.mod
