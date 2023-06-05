@@ -1,6 +1,6 @@
 FORT = gfortran
 F_DIR = $(OUT_DIR)/fortran
-FFLAGS = -O3 -fimplicit-none -moddir=$(F_DIR)/
+FFLAGS = -O3 -fimplicit-none -J$(F_DIR) -I$(F_DIR)
 OBJECTS= $(F_DIR)/slasktrd.o $(F_DIR)/slasktrf.o $(F_DIR)/sskbpf10.o $(F_DIR)/sskbpfa.o $(F_DIR)/sskbtrd.o \
 	 $(F_DIR)/sskmv.o $(F_DIR)/sskpf10.o $(F_DIR)/sskpfa.o $(F_DIR)/sskr2.o $(F_DIR)/sskr2k.o $(F_DIR)/ssktd2.o \
          $(F_DIR)/ssktf2.o $(F_DIR)/ssktrd.o $(F_DIR)/ssktrf.o \

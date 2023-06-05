@@ -24,7 +24,6 @@ fn main() {
 
     println!("cargo:rustc-link-search={}", c_interface.display());
     println!("cargo:rustc-link-search={}", fortran.display());
-    println!("cargo:rustc-link-lib=gfortran");
-    println!("cargo:rustc-link-lib=lapack");
-    println!("cargo:rustc-link-lib=blas");
+    println!("cargo:rustc-link-lib=pfapack");
+    println!("cargo:rustc-link-lib=cpfapack");
 }
